@@ -4,7 +4,7 @@
 (enable-console-print!)
 
 (def current-title (r/atom "hello"))
-(def recepies (r/atom #{{:title "Spagetti"} {:title "Beans on Toast"} {:title "Pizza"}}))
+(def recepies (r/atom #{{:title "Spaghetti"} {:title "Beans on Toast"} {:title "Pizza"}}))
 
 (defn header [s]
   [:h1 s])

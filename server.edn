@@ -1,1 +1,1 @@
-{1 {:title "Shusi"} 2 {:title "Bacon"} 3 {:title "Eggs"}}
+{:new-recipe {:title "eggs"}, 1 {:title "eggs"}, 2 {:title "shusi"}}
