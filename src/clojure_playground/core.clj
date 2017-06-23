@@ -8,13 +8,28 @@
     [compojure.core :refer [defroutes GET POST OPTIONS]]
     [compojure.route :as route]
     [cheshire.core :as json]
-    [ring.util.response :as resp]))
+    [ring.util.response :as resp]
+    [clojure.tools.logging :as log]
+    [ring.middleware.gzip :refer [wrap-gzip]]))
 
-(def recipes (atom (edn/read-string (slurp "server.edn"))))
+
+
+(defn slurp-edn [filename default-value]
+  (try
+    (log/info "reading state from" filename)
+    (edn/read-string (slurp filename))
+    (catch java.io.FileNotFoundException e
+      (log/error "file not found" filename ", falling back to" default-value)
+      default-value)))
+
+
+(def recipes-filename "recipes.edn")
+(defonce recipes (atom (slurp-edn recipes-filename {})))
 (add-watch recipes :recipes-file-store
            (fn [_ _ _ new-value]
-             (println "writing new recipe to file data store")
-             (spit "server.edn" (prn-str new-value))))
+             (log/info "writing new recipe to" recipes-filename)
+             (spit recipes-filename (prn-str new-value))))
+
 
 (defn access-controll-headers
   [handler]
@@ -24,37 +39,16 @@
                  [:headers]
                  merge
                  {"Access-Control-Allow-Origin" "*"
-
                   "Access-Control-Allow-Headers"
                                                 ["Content-Type"
                                                  "Authorization"
                                                  "Access-Control-Allow-Origin"]}))))
 
-(defn response-encoder
-  [handler]
-  (fn [request]
-    (let [response (handler request)]
-      ; @waldemar: how to avoid trying to encode files? (like index.html)
-      (if (string? (:body response))
-        response
-        (update-in response [:body] json/encode)))))
 
-(comment
-  (spit "server.edn" (prn-str {:foo "bar"}))
-  (edn/read-string (slurp "server.edn"))
-  (deref recepies)
-  (reset! recepies {:new "stuff"})
-  (defn printer [x]
-    (if (string? x)
-      ((println x) (+ 2 3))
-      (println "not a string")))
-  (printer "t"))
-
-
-(defn add-recipe [input]
-  (println input)
+(defn add-recipe [recipe]
   (swap! recipes (fn [current-recipes]
-                   (assoc current-recipes (count current-recipes) input))))
+                   (assoc current-recipes (count current-recipes) recipe))))
+
 
 (defroutes routes
            (GET "/recipes" []
@@ -68,18 +62,22 @@
            (route/resources "/")
            (route/not-found "<h1>Page not found</h1>"))
 
+
 (def http-pipeline (-> routes
                        wrap-json-response
                        (wrap-json-body {:keywords? true})
-                       access-controll-headers))
+                       access-controll-headers
+                       wrap-gzip))
 
 (defstate server :start (run-jetty #'http-pipeline {:port  3000
                                         :join? false})
           :stop (.stop server))
 
+
 (defn restart []
   (mount/stop)
   (mount/start))
+
 
 (comment
    (restart))

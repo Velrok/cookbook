@@ -5,7 +5,8 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [ring "1.6.0-RC3"]
-                 [ring/ring-json "0.4.0"]
+                 [ring/ring-json "0.4.0"
+                  :exclusions [ring/ring-core]]
                  [mount "0.1.11"]
                  [compojure "1.5.2"]
                  [org.clojure/core.async "0.3.442"]
@@ -16,7 +17,10 @@
                  [org.clojure/clojurescript "1.9.521"]
                  [reagent "0.6.1"]
                  [secretary "1.2.3"]
-                 [figwheel-sidecar "0.5.0"]]
+                 [figwheel-sidecar "0.5.0"]
+                 [cljs-http "0.1.43"]
+                 [org.clojure/tools.logging "0.4.0"]
+                 [bk/ring-gzip "0.2.1"]]
   :plugins [[lein-cljsbuild "1.1.6"]
             [lein-figwheel "0.5.10"]]
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"

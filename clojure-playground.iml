@@ -16,10 +16,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Leiningen: args4j:2.33" level="project" />
+    <orderEntry type="library" name="Leiningen: bk/ring-gzip:0.2.1" level="project" />
     <orderEntry type="library" name="Leiningen: cheshire:5.7.0" level="project" />
     <orderEntry type="library" name="Leiningen: clj-stacktrace:0.2.8" level="project" />
     <orderEntry type="library" name="Leiningen: clj-time:0.11.0" level="project" />
-    <orderEntry type="library" name="Leiningen: cljs-http:0.1.42" level="project" />
+    <orderEntry type="library" name="Leiningen: cljs-http:0.1.43" level="project" />
     <orderEntry type="library" name="Leiningen: cljsjs/react-dom-server:15.4.0-0" level="project" />
     <orderEntry type="library" name="Leiningen: cljsjs/react-dom:15.4.0-0" level="project" />
     <orderEntry type="library" name="Leiningen: cljsjs/react:15.4.0-0" level="project" />
@@ -76,6 +77,7 @@
     <orderEntry type="library" name="Leiningen: org.clojure/java.classpath:0.2.3" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.analyzer.jvm:0.7.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.analyzer:0.6.9" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/tools.logging:0.4.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.macro:0.1.5" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.namespace:0.2.11" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.nrepl:0.2.12" level="project" />
