@@ -3,14 +3,16 @@
     [clojure.string :as string :refer [split]]
     [clojure.edn :as edn]
     [ring.adapter.jetty :as jetty :refer [run-jetty]]
+    [ring.middleware.params :refer [wrap-params]]
     [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
     [mount.core :as mount :refer [defstate]]
-    [compojure.core :refer [defroutes GET POST OPTIONS]]
+    [compojure.core :refer [defroutes GET POST OPTIONS DELETE]]
     [compojure.route :as route]
     [cheshire.core :as json]
     [ring.util.response :as resp]
     [clojure.tools.logging :as log]
-    [ring.middleware.gzip :refer [wrap-gzip]]))
+    [ring.middleware.gzip :refer [wrap-gzip]])
+  (:import [java.util UUID]))
 
 
 
@@ -47,13 +49,27 @@
 
 (defn add-recipe [recipe]
   (swap! recipes (fn [current-recipes]
-                   (assoc current-recipes (count current-recipes) recipe))))
+                   (assoc current-recipes (UUID/randomUUID) recipe))))
+
+
+(defn remove-recipe [id]
+  (swap! recipes (fn [current-recipes]
+                   (dissoc current-recipes id))))
 
 
 (defroutes routes
            (GET "/recipes" []
              {:status 200
-              :body   {:recipes (vals @recipes)}})
+              :body   {:recipes (map (fn [[id recipe]] (assoc recipe :id id))
+                                     @recipes)}})
+           (DELETE "/recipe" request
+                   (let [id (UUID/fromString (get-in request [:params "id"]))]
+                     (if (contains? @recipes id)
+                       (do
+                         (remove-recipe id)
+                         {:status 200})
+                       {:status 404}))
+                   )
            (GET "/" [] (resp/resource-response "/index.html" {:root "public"}))
            (POST "/recipes" request (do
                                       (add-recipe (get request :body))
@@ -64,6 +80,7 @@
 
 
 (def http-pipeline (-> routes
+                       wrap-params
                        wrap-json-response
                        (wrap-json-body {:keywords? true})
                        access-controll-headers

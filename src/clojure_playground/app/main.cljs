@@ -25,6 +25,14 @@
   )
 
 
+(defn bootstrap-textarea [title html-attr]
+  (let [id (gensym (str title "-"))]
+    [:div.form-group
+     [:label {:for id} title]
+     [:textarea.form-control (assoc html-attr :id id)]])
+  )
+
+
 (defn new-recipe []
   (let [title (atom "")
         description (atom "")]
@@ -39,9 +47,8 @@
            :placeholder "Enter title"
            :on-change   (fn [event]
                           (reset! title (event-value event)))}]
-         [bootstrap-input "Description"
-          ;; textarea could be the tag not the type
-          {:type        "textarea"
+         [bootstrap-textarea "Description"
+          {:type        "text"
            :placeholder "Enter description"
            :on-change   (fn [event]
                           (reset! description (event-value event)))}]

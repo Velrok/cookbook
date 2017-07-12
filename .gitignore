@@ -16,3 +16,4 @@ figwheel_server.log
 clojure-playground.iml
 recipes.edn
 server.edn
+.idea/workspace.xml

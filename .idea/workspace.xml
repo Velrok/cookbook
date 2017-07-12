@@ -35,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cljs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cljs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clojure_playground/app/main.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="229">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -48,8 +58,8 @@
       <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clojure_playground/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="82" column="7" lean-forward="true" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+            <state relative-caret-position="720">
+              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,8 +68,8 @@
       <file leaf-file-name="recipes.edn" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recipes.edn">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,15 +114,16 @@
         <option value="$PROJECT_DIR$/server.edn" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/project.clj" />
-        <option value="$PROJECT_DIR$/src/clojure_playground/core.clj" />
         <option value="$PROJECT_DIR$/resources/public/index.html" />
+        <option value="$PROJECT_DIR$/recipes.edn" />
+        <option value="$PROJECT_DIR$/src/clojure_playground/core.clj" />
         <option value="$PROJECT_DIR$/src/clojure_playground/app/main.cljs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+    <option name="x" value="836" />
+    <option name="width" value="1091" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -261,7 +272,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="cursive.last.file.extension.C\:/Users/Nesurion/IdeaProjects/clojure-playground/src" value="clj" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="TEXT" />
-    <property name="SearchEverywhereHistoryKey" value="re&#9;FILE&#9;file://C:/Users/Nesurion/IdeaProjects/clojure-playground/recipes.edn" />
+    <property name="SearchEverywhereHistoryKey" value=".git&#9;FILE&#9;file://C:/Users/Nesurion/IdeaProjects/clojure-playground/.gitignore&#10;re&#9;FILE&#9;file://C:/Users/Nesurion/IdeaProjects/clojure-playground/recipes.edn" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -272,7 +283,7 @@
       <recent name="C:\Users\Nesurion\IdeaProjects\clojure-playground\resources\public" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1498253166867">{:repl-history {:ide [], :local [{:command &quot;(+ 1 1)&quot;, :offset 7, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def server\n    (delay (run-jetty handler {:port 3000\n                               :join? false})))&quot;, :offset 101, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/stop)&quot;, :offset 12, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/start)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(start-figwheel!)&quot;, :offset 17, :ns &quot;script.repl&quot;} {:command &quot;{:body {\&quot;foo\&quot; \&quot;bar\&quot;}}&quot;, :offset 21, :ns &quot;clojure-playground.core&quot;} {:command &quot;(comment\n  json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}\n  )&quot;, :offset 57, :ns &quot;clojure-playground.core&quot;} {:command &quot;(json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}})&quot;, :offset 44, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :body 5)&quot;, :offset 37, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :header 5)&quot;, :offset 39, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode (:body foo))))&quot;, :offset 75, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode :body foo)))&quot;, :offset 73, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode :body foo)))&quot;, :offset 79, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode (:body foo))))&quot;, :offset 81, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; :hello)&quot;, :offset 26, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn {:foo \&quot;bar\&quot;})&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn#str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn-str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; (prn-str {:foo \&quot;bar\&quot;}))&quot;, :offset 42, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;server.edn\&quot;)&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(edn/read-string (slurp \&quot;server.edn\&quot;))&quot;, :offset 38, :ns &quot;clojure-playground.core&quot;} {:command &quot;(reset! recepies {:new \&quot;stuff\&quot;})&quot;, :offset 32, :ns &quot;clojure-playground.core&quot;} {:command &quot;(deref recepies)&quot;, :offset 16, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recepies (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 60, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/file-response \&quot;/index.html\&quot;))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 275, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/resource-response \&quot;/index.html\&quot; {:root \&quot;public\&quot;}))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 296, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        response\n        (println response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (println response)\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(println \&quot;foo\&quot;)&quot;, :offset 15, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (println x))&quot;, :offset 34, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (+ 2 3 4)\n    (println x))&quot;, :offset 48, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      (println x)\n      (println \&quot;not a string\&quot;)))&quot;, :offset 88, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;hello\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        ((println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 226, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      ((println x) (+ 2 3))\n      (println \&quot;not a string\&quot;)))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer 2)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;t\&quot;)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (do (println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 229, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (string? (:body response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 220, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (or (string? (:body response)) (instance? java.io.File response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 259, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recipes (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 59, :ns &quot;clojure-playground.core&quot;} {:command &quot;(ns clojure-playground.core\n  (:require\n    [clojure.string :as string :refer [split]]\n    [clojure.edn :as edn]\n    [ring.adapter.jetty :as jetty :refer [run-jetty]]\n    [ring.middleware.json :refer [wrap-json-body wrap-json-response]]\n    [mount.core :as mount :refer [defstate]]\n    [compojure.core :refer [defroutes GET POST OPTIONS]]\n    [compojure.route :as route]\n    [cheshire.core :as json]\n    [ring.util.response :as resp]))&quot;, :offset 435, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;a\&quot;)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(try \n           (slurp \&quot;a\&quot;) \n           (catch java.io.FileNotFoundException e\n             nil))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/info \&quot;hell\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/error \&quot;hell\&quot;)&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;a.edn\&quot; {})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;server.edn\&quot; {})&quot;, :offset 27, :ns &quot;clojure-playground.core&quot;} {:command &quot;(restart)&quot;, :offset 9, :ns &quot;clojure-playground.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1499890518334">{:repl-history {:ide [], :local [{:command &quot;(+ 1 1)&quot;, :offset 7, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def server\n    (delay (run-jetty handler {:port 3000\n                               :join? false})))&quot;, :offset 101, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/stop)&quot;, :offset 12, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/start)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(start-figwheel!)&quot;, :offset 17, :ns &quot;script.repl&quot;} {:command &quot;{:body {\&quot;foo\&quot; \&quot;bar\&quot;}}&quot;, :offset 21, :ns &quot;clojure-playground.core&quot;} {:command &quot;(comment\n  json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}\n  )&quot;, :offset 57, :ns &quot;clojure-playground.core&quot;} {:command &quot;(json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}})&quot;, :offset 44, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :body 5)&quot;, :offset 37, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :header 5)&quot;, :offset 39, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode (:body foo))))&quot;, :offset 75, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode :body foo)))&quot;, :offset 73, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode :body foo)))&quot;, :offset 79, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode (:body foo))))&quot;, :offset 81, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; :hello)&quot;, :offset 26, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn {:foo \&quot;bar\&quot;})&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn#str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn-str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; (prn-str {:foo \&quot;bar\&quot;}))&quot;, :offset 42, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;server.edn\&quot;)&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(edn/read-string (slurp \&quot;server.edn\&quot;))&quot;, :offset 38, :ns &quot;clojure-playground.core&quot;} {:command &quot;(reset! recepies {:new \&quot;stuff\&quot;})&quot;, :offset 32, :ns &quot;clojure-playground.core&quot;} {:command &quot;(deref recepies)&quot;, :offset 16, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recepies (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 60, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/file-response \&quot;/index.html\&quot;))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 275, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/resource-response \&quot;/index.html\&quot; {:root \&quot;public\&quot;}))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 296, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        response\n        (println response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (println response)\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(println \&quot;foo\&quot;)&quot;, :offset 15, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (println x))&quot;, :offset 34, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (+ 2 3 4)\n    (println x))&quot;, :offset 48, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      (println x)\n      (println \&quot;not a string\&quot;)))&quot;, :offset 88, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;hello\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        ((println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 226, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      ((println x) (+ 2 3))\n      (println \&quot;not a string\&quot;)))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer 2)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;t\&quot;)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (do (println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 229, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (string? (:body response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 220, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (or (string? (:body response)) (instance? java.io.File response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 259, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recipes (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 59, :ns &quot;clojure-playground.core&quot;} {:command &quot;(ns clojure-playground.core\n  (:require\n    [clojure.string :as string :refer [split]]\n    [clojure.edn :as edn]\n    [ring.adapter.jetty :as jetty :refer [run-jetty]]\n    [ring.middleware.json :refer [wrap-json-body wrap-json-response]]\n    [mount.core :as mount :refer [defstate]]\n    [compojure.core :refer [defroutes GET POST OPTIONS]]\n    [compojure.route :as route]\n    [cheshire.core :as json]\n    [ring.util.response :as resp]))&quot;, :offset 435, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;a\&quot;)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(try \n           (slurp \&quot;a\&quot;) \n           (catch java.io.FileNotFoundException e\n             nil))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/info \&quot;hell\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/error \&quot;hell\&quot;)&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;a.edn\&quot; {})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;server.edn\&quot; {})&quot;, :offset 27, :ns &quot;clojure-playground.core&quot;} {:command &quot;(restart)&quot;, :offset 9, :ns &quot;clojure-playground.core&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -289,10 +300,12 @@
     <configuration default="false" name="core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="clojure-playground" />
       <setting name="path" value="$PROJECT_DIR$/src/clojure_playground/core.clj" />
+      <setting name="namespace" value="" />
+      <setting name="useLein" value="false" />
+      <setting name="profiles" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/clojure_playground" />
-      <setting name="repl" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -392,10 +405,12 @@
     <configuration default="true" type="ClojureScriptRunConfiguration" factoryName="Clojure Script">
       <module name="" />
       <setting name="path" value="" />
+      <setting name="namespace" value="" />
+      <setting name="useLein" value="false" />
+      <setting name="profiles" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="" />
-      <setting name="repl" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -572,39 +587,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="836" y="0" width="1091" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2830706" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3451163" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19054146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -918,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/repl.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -950,6 +958,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="52" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.edn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -970,7 +992,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.edn">
+    <entry file="file://$PROJECT_DIR$/recipes.edn">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -978,34 +1000,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recipes.edn">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/clojure_playground/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="82" column="7" lean-forward="true" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        <state relative-caret-position="720">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clojure_playground/app/main.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="229">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>
