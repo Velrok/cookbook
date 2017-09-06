@@ -60,16 +60,16 @@
 (defroutes routes
            (GET "/recipes" []
              {:status 200
-              :body   {:recipes (map (fn [[id recipe]] (assoc recipe :id id))
-                                     @recipes)}})
+              :body   {:recipes (into {} (for [[id recipe] @recipes]
+                                           [id (assoc recipe :id id)]))}})
            (DELETE "/recipe" request
-                   (let [id (UUID/fromString (get-in request [:params "id"]))]
-                     (if (contains? @recipes id)
-                       (do
-                         (remove-recipe id)
-                         {:status 200})
-                       {:status 404}))
-                   )
+             (let [id (UUID/fromString (get-in request [:params "id"]))]
+               (if (contains? @recipes id)
+                 (do
+                   (remove-recipe id)
+                   {:status 200})
+                 {:status 404}))
+             )
            (GET "/" [] (resp/resource-response "/index.html" {:root "public"}))
            (POST "/recipes" request (do
                                       (add-recipe (get request :body))
@@ -87,7 +87,7 @@
                        wrap-gzip))
 
 (defstate server :start (run-jetty #'http-pipeline {:port  3000
-                                        :join? false})
+                                                    :join? false})
           :stop (.stop server))
 
 
@@ -97,4 +97,4 @@
 
 
 (comment
-   (restart))
+  (restart))

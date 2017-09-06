@@ -4,7 +4,7 @@
             [cljs-http.client :as http]
             [cljs.core.async :refer [<!]]))
 
-(def recipes (r/atom []))
+(def recipes (r/atom {}))
 
 (def base-url "http://localhost:3000")
 

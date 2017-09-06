@@ -62,6 +62,38 @@
           "add"]]]]]]))
 
 
+(defn show-recipe-in-accordion [recipe accordion-id]
+  (let [card-id (gensym "card")]
+    [:div.card
+     [:div.card-header {:role "tab"}
+      [:h5.mb-0
+       [:a {:data-toggle "collapse"
+            :data-parent (str "#" accordion-id)
+            :href        (str "#" card-id)}
+        (str (:title recipe) (:ui-state recipe "X"))]]]
+     [:div.collapse {:role "tabpanel"
+                     :id   card-id}
+      (if (= (:ui-state recipe) :edit)
+        [:div.card-block
+         [:textarea.form-control (:description recipe)]
+         [:button.btn.btn-default
+          {:type     "button"
+           :on-click (fn [event]
+                       (swap! io/recipes
+                              (fn [recipes]
+                                (assoc-in recipes
+                                          [(keyword (:id recipe)) :ui-state] :show))))}
+          "cancel"]]
+        [:div.card-block
+         {:on-click (fn [event]
+                      (swap! io/recipes
+                             (fn [recipes]
+                               (assoc-in recipes
+                                         [(keyword (:id recipe)) :ui-state] :edit))))}
+         (:description recipe)])
+      ]]))
+
+
 (defn recipes-accordion [recipes]
   [:div.row.mb-4
    [:div.col
@@ -69,23 +101,13 @@
       [:div {:role "tablist"
              :id   id}
        (for [recipe recipes]
-         (let [card-id (gensym "card")]
-           [:div.card
-            [:div.card-header {:role "tab"}
-             [:h5.mb-0
-              [:a {:data-toggle "collapse"
-                   :data-parent (str "#" id)
-                   :href        (str "#" card-id)}
-               (:title recipe)]]]
-            [:div.collapse {:role "tabpanel"
-                            :id   card-id}
-             [:div.card-block (:description recipe)]]]))])]])
+         [show-recipe-in-accordion recipe id])])]])
 
 ;; As a user I want to edit a recipe that I've added previously
 (defn hello []
   [:div
    [header "cookbook"]
-   [recipes-accordion @io/recipes]
+   [recipes-accordion (sort-by :title (vals @io/recipes))]
    [new-recipe]])
 
 
