@@ -46,11 +46,19 @@
                                                  "Authorization"
                                                  "Access-Control-Allow-Origin"]}))))
 
+(defn convert-to-uuid [uuid-str]
+  (if (string? uuid-str)
+    (UUID/fromString uuid-str)
+    uuid-str))
+
 
 (defn add-recipe [recipe]
-  (swap! recipes (fn [current-recipes]
-                   (assoc current-recipes (UUID/randomUUID) recipe))))
-
+  (swap! recipes
+         (fn [current-recipes]
+           (let [recipe-with-id (merge {:id (UUID/randomUUID)}
+                                       recipe)]
+             (merge-with merge current-recipes
+                         {(convert-to-uuid (:id recipe-with-id)) recipe-with-id})))))
 
 (defn remove-recipe [id]
   (swap! recipes (fn [current-recipes]

@@ -32,6 +32,16 @@
      [:textarea.form-control (assoc html-attr :id id)]])
   )
 
+(defn button
+  ([label on-click-fn]
+   (button label on-click-fn "btn-default"))
+  ([label on-click-fn class]
+   [:button.btn
+    {:class    class
+     :type     "button"
+     :on-click on-click-fn}
+    label]))
+
 
 (defn new-recipe []
   (let [title (atom "")
@@ -52,14 +62,12 @@
            :placeholder "Enter description"
            :on-change   (fn [event]
                           (reset! description (event-value event)))}]
-         [:button.btn.btn-primary
-          {:type     "button"
-           :on-click (fn [event]
-                       (go (<! (io/store-recipe {:title       @title
-                                                 :description @description}))
-                           (io/reset-recipes))
-                       false)}
-          "add"]]]]]]))
+         [button "add" (fn [event]
+                         (go (<! (io/store-recipe {:title       @title
+                                                   :description @description}))
+                             (io/reset-recipes))
+                         false)
+          "btn-primary"]]]]]]))
 
 
 (defn show-recipe-in-accordion [recipe accordion-id]
@@ -70,28 +78,37 @@
        [:a {:data-toggle "collapse"
             :data-parent (str "#" accordion-id)
             :href        (str "#" card-id)}
-        (str (:title recipe) (:ui-state recipe "X"))]]]
+        (str (:title recipe))]]]
      [:div.collapse {:role "tabpanel"
                      :id   card-id}
       (if (= (:ui-state recipe) :edit)
-        [:div.card-block
-         [:textarea.form-control (:description recipe)]
-         [:button.btn.btn-default
-          {:type     "button"
-           :on-click (fn [event]
-                       (swap! io/recipes
-                              (fn [recipes]
-                                (assoc-in recipes
-                                          [(keyword (:id recipe)) :ui-state] :show))))}
-          "cancel"]]
+        (let [description-edit (atom (:description recipe))]
+          [:div.card-block
+           [:textarea.form-control
+            {:on-change (fn [event]
+                          (reset! description-edit (event-value event)))}
+            (:description recipe)]
+           [button "cancel"
+            (fn [event]
+              (swap! io/recipes
+                     (fn [recipes]
+                       (assoc-in recipes
+                                 [(keyword (:id recipe)) :ui-state]
+                                 :show))))]
+           [button "save" (fn [event]
+                            (go (<! (io/store-recipe {:id          (:id recipe)
+                                                      :description @description-edit}))
+                                (io/reset-recipes))
+                            false)
+            "btn-primary"]])
         [:div.card-block
          {:on-click (fn [event]
                       (swap! io/recipes
                              (fn [recipes]
                                (assoc-in recipes
-                                         [(keyword (:id recipe)) :ui-state] :edit))))}
-         (:description recipe)])
-      ]]))
+                                         [(keyword (:id recipe)) :ui-state]
+                                         :edit))))}
+         (:description recipe)])]]))
 
 
 (defn recipes-accordion [recipes]
@@ -103,6 +120,11 @@
        (for [recipe recipes]
          [show-recipe-in-accordion recipe id])])]])
 
+(defn debug [label state-atom]
+  [:div
+   [:h6 label]
+   [:code
+    (prn-str state-atom)]])
 ;; As a user I want to edit a recipe that I've added previously
 (defn hello []
   [:div
