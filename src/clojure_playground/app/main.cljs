@@ -13,6 +13,7 @@
    [:div.col
     [:h1 s]]])
 
+
 (defn event-value [event]
   (.-value (.-target event)))
 
@@ -32,6 +33,7 @@
      [:textarea.form-control (assoc html-attr :id id)]])
   )
 
+
 (defn button
   ([label on-click-fn]
    (button label on-click-fn "btn-default"))
@@ -43,9 +45,26 @@
     label]))
 
 
+(defn render-ingredients [ingredients]
+  [:ul {:id "ingredients"}
+   (for [x @ingredients]
+     [:li x])])
+
+
+(defn render-ingredient-input [ingredient-input]
+  [:input.form-control {:class       "input-sm"
+                        :value       @ingredient-input
+                        :type        "text"
+                        :placeholder "Add ingredient"
+                        :on-change   (fn [event]
+                                       (reset! ingredient-input (event-value event)))}])
+
+
 (defn new-recipe []
   (let [title (atom "")
-        description (atom "")]
+        description (atom "")
+        ingredient-input (r/atom "")
+        ingredients (r/atom [])]
     [:div.row
      [:div.col
       [:div.card
@@ -57,6 +76,17 @@
            :placeholder "Enter title"
            :on-change   (fn [event]
                           (reset! title (event-value event)))}]
+         [:div.form-group
+          [:label "Ingredients"]
+          [render-ingredients ingredients]]
+         [:div.input-group
+          [render-ingredient-input ingredient-input]
+          [:span.input-group-btn
+           [button "add" (fn [event]
+                           (swap! ingredients conj @ingredient-input)
+                           (reset! ingredient-input "")
+                           false)
+            "btn-secondary"]]]
          [bootstrap-textarea "Description"
           {:type        "text"
            :placeholder "Enter description"
@@ -125,8 +155,8 @@
    [:h6 label]
    [:code
     (prn-str state-atom)]])
-;; As a user I want to edit a recipe that I've added previously
-(defn hello []
+
+(defn app []
   [:div
    [header "cookbook"]
    [recipes-accordion (sort-by :title (vals @io/recipes))]
@@ -135,5 +165,5 @@
 
 (defn ^:export run []
   (io/reset-recipes)
-  (r/render [hello]
+  (r/render [app]
             (js/document.getElementById "app")))

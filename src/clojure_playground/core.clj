@@ -11,9 +11,10 @@
     [cheshire.core :as json]
     [ring.util.response :as resp]
     [clojure.tools.logging :as log]
-    [ring.middleware.gzip :refer [wrap-gzip]])
-  (:import [java.util UUID]))
-
+    [ring.middleware.gzip :refer [wrap-gzip]]
+    [ring.middleware.basic-authentication :refer [wrap-basic-authentication]])
+  (:import [java.util UUID])
+  (:gen-class))
 
 
 (defn slurp-edn [filename default-value]
@@ -31,6 +32,12 @@
            (fn [_ _ _ new-value]
              (log/info "writing new recipe to" recipes-filename)
              (spit recipes-filename (prn-str new-value))))
+
+
+(defn authenticated? [name pass]
+  (and (= name "nesurion")
+       ;; don't store the password in plain text
+       (= pass "vnjxMUpD9wdixN7Bwr3q")))
 
 
 (defn access-controll-headers
@@ -59,6 +66,7 @@
                                        recipe)]
              (merge-with merge current-recipes
                          {(convert-to-uuid (:id recipe-with-id)) recipe-with-id})))))
+
 
 (defn remove-recipe [id]
   (swap! recipes (fn [current-recipes]
@@ -92,15 +100,19 @@
                        wrap-json-response
                        (wrap-json-body {:keywords? true})
                        access-controll-headers
-                       wrap-gzip))
+                       wrap-gzip
+                       (wrap-basic-authentication authenticated?)))
 
 (defstate server :start (run-jetty #'http-pipeline {:port  3000
                                                     :join? false})
           :stop (.stop server))
 
-
 (defn restart []
   (mount/stop)
+  (mount/start))
+
+
+(defn -main [& args]
   (mount/start))
 
 

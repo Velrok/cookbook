@@ -18,8 +18,8 @@
       <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="307">
+              <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -28,8 +28,8 @@
       <file leaf-file-name="io.cljs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clojure_playground/app/io.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="main.cljs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/clojure_playground/app/main.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="80" column="28" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+            <state relative-caret-position="198">
+              <caret line="56" column="43" lean-forward="false" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clojure_playground/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+            <state relative-caret-position="-1002">
+              <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -58,8 +58,8 @@
       <file leaf-file-name="recipes.edn" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recipes.edn">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,6 +91,7 @@
       <find>Buy fresh</find>
       <find>:show</find>
       <find>Changed Salad</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,12 +108,13 @@
         <option value="$PROJECT_DIR$/src/script/repl.clj" />
         <option value="$PROJECT_DIR$/server.edn" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-        <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/resources/public/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/clojure_playground/app/io.cljs" />
-        <option value="$PROJECT_DIR$/src/clojure_playground/core.clj" />
         <option value="$PROJECT_DIR$/recipes.edn" />
+        <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/src/clojure_playground/core.clj" />
+        <option value="$PROJECT_DIR$/src/clojure_playground/Dockerfile" />
         <option value="$PROJECT_DIR$/src/clojure_playground/app/main.cljs" />
       </list>
     </option>
@@ -155,7 +157,7 @@
       <recent name="C:\Users\Nesurion\IdeaProjects\clojure-playground\resources\public" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1505160842837">{:repl-history {:ide [], :local [{:command &quot;(+ 1 1)&quot;, :offset 7, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def server\n    (delay (run-jetty handler {:port 3000\n                               :join? false})))&quot;, :offset 101, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/stop)&quot;, :offset 12, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/start)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(start-figwheel!)&quot;, :offset 17, :ns &quot;script.repl&quot;} {:command &quot;{:body {\&quot;foo\&quot; \&quot;bar\&quot;}}&quot;, :offset 21, :ns &quot;clojure-playground.core&quot;} {:command &quot;(comment\n  json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}\n  )&quot;, :offset 57, :ns &quot;clojure-playground.core&quot;} {:command &quot;(json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}})&quot;, :offset 44, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :body 5)&quot;, :offset 37, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :header 5)&quot;, :offset 39, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode (:body foo))))&quot;, :offset 75, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode :body foo)))&quot;, :offset 73, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode :body foo)))&quot;, :offset 79, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode (:body foo))))&quot;, :offset 81, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; :hello)&quot;, :offset 26, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn {:foo \&quot;bar\&quot;})&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn#str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn-str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; (prn-str {:foo \&quot;bar\&quot;}))&quot;, :offset 42, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;server.edn\&quot;)&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(edn/read-string (slurp \&quot;server.edn\&quot;))&quot;, :offset 38, :ns &quot;clojure-playground.core&quot;} {:command &quot;(reset! recepies {:new \&quot;stuff\&quot;})&quot;, :offset 32, :ns &quot;clojure-playground.core&quot;} {:command &quot;(deref recepies)&quot;, :offset 16, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recepies (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 60, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/file-response \&quot;/index.html\&quot;))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 275, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/resource-response \&quot;/index.html\&quot; {:root \&quot;public\&quot;}))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 296, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        response\n        (println response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (println response)\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(println \&quot;foo\&quot;)&quot;, :offset 15, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (println x))&quot;, :offset 34, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (+ 2 3 4)\n    (println x))&quot;, :offset 48, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      (println x)\n      (println \&quot;not a string\&quot;)))&quot;, :offset 88, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;hello\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        ((println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 226, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      ((println x) (+ 2 3))\n      (println \&quot;not a string\&quot;)))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer 2)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;t\&quot;)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (do (println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 229, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (string? (:body response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 220, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (or (string? (:body response)) (instance? java.io.File response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 259, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recipes (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 59, :ns &quot;clojure-playground.core&quot;} {:command &quot;(ns clojure-playground.core\n  (:require\n    [clojure.string :as string :refer [split]]\n    [clojure.edn :as edn]\n    [ring.adapter.jetty :as jetty :refer [run-jetty]]\n    [ring.middleware.json :refer [wrap-json-body wrap-json-response]]\n    [mount.core :as mount :refer [defstate]]\n    [compojure.core :refer [defroutes GET POST OPTIONS]]\n    [compojure.route :as route]\n    [cheshire.core :as json]\n    [ring.util.response :as resp]))&quot;, :offset 435, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;a\&quot;)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(try \n           (slurp \&quot;a\&quot;) \n           (catch java.io.FileNotFoundException e\n             nil))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/info \&quot;hell\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/error \&quot;hell\&quot;)&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;a.edn\&quot; {})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;server.edn\&quot; {})&quot;, :offset 27, :ns &quot;clojure-playground.core&quot;} {:command &quot;(restart)&quot;, :offset 9, :ns &quot;clojure-playground.core&quot;} {:command &quot;(for [r @recipes] (prn r))&quot;, :offset 26, :ns &quot;clojure-playground.core&quot;} {:command &quot;(keys @recipes)&quot;, :offset 15, :ns &quot;clojure-playground.core&quot;} {:command &quot;(for [[id r] @recipes] (prn r))&quot;, :offset 31, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into [] (range 10))&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into {} (range 10))&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into {} [[1 2] [3 4]])&quot;, :offset 23, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into {} (for [[id r] @recipes] [(UUID/randomUUID) r]))&quot;, :offset 55, :ns &quot;clojure-playground.core&quot;} {:command &quot;(reset! recipes (into {} (for [[id r] @recipes] [(UUID/randomUUID) r])))&quot;, :offset 72, :ns &quot;clojure-playground.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1506370262102">{:repl-history {:ide [], :local [{:command &quot;(+ 1 1)&quot;, :offset 7, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def server\n    (delay (run-jetty handler {:port 3000\n                               :join? false})))&quot;, :offset 101, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/stop)&quot;, :offset 12, :ns &quot;clojure-playground.core&quot;} {:command &quot;(mount/start)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(start-figwheel!)&quot;, :offset 17, :ns &quot;script.repl&quot;} {:command &quot;{:body {\&quot;foo\&quot; \&quot;bar\&quot;}}&quot;, :offset 21, :ns &quot;clojure-playground.core&quot;} {:command &quot;(comment\n  json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}\n  )&quot;, :offset 57, :ns &quot;clojure-playground.core&quot;} {:command &quot;(json/generate-string {:body {\&quot;foo\&quot; \&quot;bar\&quot;}})&quot;, :offset 44, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :body 5)&quot;, :offset 37, :ns &quot;clojure-playground.core&quot;} {:command &quot;(assoc {:body {\&quot;foo\&quot; \&quot;bar\&quot;}} :header 5)&quot;, :offset 39, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode (:body foo))))&quot;, :offset 75, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo (json/encode :body foo)))&quot;, :offset 73, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode :body foo)))&quot;, :offset 79, :ns &quot;clojure-playground.core&quot;} {:command &quot;(let [foo {:body {\&quot;foo\&quot; \&quot;bar\&quot;}}]\n    (assoc foo :body (json/encode (:body foo))))&quot;, :offset 81, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; :hello)&quot;, :offset 26, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn {:foo \&quot;bar\&quot;})&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn#str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(prn-str {:foo \&quot;bar\&quot;})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(spit \&quot;server.edn\&quot; (prn-str {:foo \&quot;bar\&quot;}))&quot;, :offset 42, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;server.edn\&quot;)&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(edn/read-string (slurp \&quot;server.edn\&quot;))&quot;, :offset 38, :ns &quot;clojure-playground.core&quot;} {:command &quot;(reset! recepies {:new \&quot;stuff\&quot;})&quot;, :offset 32, :ns &quot;clojure-playground.core&quot;} {:command &quot;(deref recepies)&quot;, :offset 16, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recepies (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 60, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/file-response \&quot;/index.html\&quot;))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 275, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defroutes routes\n           (GET \&quot;/recepies\&quot; []\n             {:status 200\n              :body   {:recepies (vals @recepies)}})\n           (GET \&quot;/\&quot; [] (resp/resource-response \&quot;/index.html\&quot; {:root \&quot;public\&quot;}))\n           (route/resources \&quot;/\&quot;)\n           (route/not-found \&quot;&lt;h1&gt;Page not found&lt;/h1&gt;\&quot;))&quot;, :offset 296, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        response\n        (println response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (println response)\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 222, :ns &quot;clojure-playground.core&quot;} {:command &quot;(println \&quot;foo\&quot;)&quot;, :offset 15, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (println x))&quot;, :offset 34, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (+ 2 3 4)\n    (println x))&quot;, :offset 48, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      (println x)\n      (println \&quot;not a string\&quot;)))&quot;, :offset 88, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;hello\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        ((println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 226, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn printer [x]\n    (if (string? x)\n      ((println x) (+ 2 3))\n      (println \&quot;not a string\&quot;)))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer 2)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(printer \&quot;t\&quot;)&quot;, :offset 13, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (if (string? (:body response))\n        (do (println response)\n          response)\n        (update-in response [:body] json/encode)))))&quot;, :offset 229, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (string? (:body response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 220, :ns &quot;clojure-playground.core&quot;} {:command &quot;(defn response-encoder\n  [handler]\n  (fn [request]\n    (let [response (handler request)]\n      (println response)\n      (if (or (string? (:body response)) (instance? java.io.File response))\n        response\n        (update-in response [:body] json/encode)))))&quot;, :offset 259, :ns &quot;clojure-playground.core&quot;} {:command &quot;(def recipes (atom (edn/read-string (slurp \&quot;server.edn\&quot;))))&quot;, :offset 59, :ns &quot;clojure-playground.core&quot;} {:command &quot;(ns clojure-playground.core\n  (:require\n    [clojure.string :as string :refer [split]]\n    [clojure.edn :as edn]\n    [ring.adapter.jetty :as jetty :refer [run-jetty]]\n    [ring.middleware.json :refer [wrap-json-body wrap-json-response]]\n    [mount.core :as mount :refer [defstate]]\n    [compojure.core :refer [defroutes GET POST OPTIONS]]\n    [compojure.route :as route]\n    [cheshire.core :as json]\n    [ring.util.response :as resp]))&quot;, :offset 435, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp \&quot;a\&quot;)&quot;, :offset 11, :ns &quot;clojure-playground.core&quot;} {:command &quot;(try \n           (slurp \&quot;a\&quot;) \n           (catch java.io.FileNotFoundException e\n             nil))&quot;, :offset 98, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/info \&quot;hell\&quot;)&quot;, :offset 17, :ns &quot;clojure-playground.core&quot;} {:command &quot;(log/error \&quot;hell\&quot;)&quot;, :offset 18, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;a.edn\&quot; {})&quot;, :offset 22, :ns &quot;clojure-playground.core&quot;} {:command &quot;(slurp-edn \&quot;server.edn\&quot; {})&quot;, :offset 27, :ns &quot;clojure-playground.core&quot;} {:command &quot;(for [r @recipes] (prn r))&quot;, :offset 26, :ns &quot;clojure-playground.core&quot;} {:command &quot;(keys @recipes)&quot;, :offset 15, :ns &quot;clojure-playground.core&quot;} {:command &quot;(for [[id r] @recipes] (prn r))&quot;, :offset 31, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into [] (range 10))&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into {} (range 10))&quot;, :offset 20, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into {} [[1 2] [3 4]])&quot;, :offset 23, :ns &quot;clojure-playground.core&quot;} {:command &quot;(into {} (for [[id r] @recipes] [(UUID/randomUUID) r]))&quot;, :offset 55, :ns &quot;clojure-playground.core&quot;} {:command &quot;(reset! recipes (into {} (for [[id r] @recipes] [(UUID/randomUUID) r])))&quot;, :offset 72, :ns &quot;clojure-playground.core&quot;} {:command &quot;(merge {:a :b} {:a :c})&quot;, :offset 23, :ns &quot;clojure-playground.core&quot;} {:command &quot;(merge {:a {1 2}} {:a {2 3}})&quot;, :offset 29, :ns &quot;clojure-playground.core&quot;} {:command &quot;(merge-with merge {:a {1 2}} {:a {2 3}})&quot;, :offset 40, :ns &quot;clojure-playground.core&quot;} {:command &quot;(merge-with merge {:a {1 {:f :g}}} {:a {1 {:f :x}}})&quot;, :offset 52, :ns &quot;clojure-playground.core&quot;} {:command &quot;(merge-with merge {:a {1 {:f :g :h 1}}} {:a {1 {:f :x}}})&quot;, :offset 57, :ns &quot;clojure-playground.core&quot;} {:command &quot;(restart)&quot;, :offset 9, :ns &quot;clojure-playground.core&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -178,6 +180,17 @@
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/clojure_playground" />
+      <method />
+    </configuration>
+    <configuration default="false" name="clojure-playground.core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="clojure-playground" />
+      <setting name="path" value="" />
+      <setting name="namespace" value="clojure-playground.core" />
+      <setting name="useLein" value="false" />
+      <setting name="profiles" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -422,14 +435,16 @@
       <setting name="profiles" value="" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Clojure REPL.REPL" />
       <item index="1" class="java.lang.String" itemvalue="Clojure REPL.REPL-Figwheel" />
       <item index="2" class="java.lang.String" itemvalue="Clojure Application.core" />
+      <item index="3" class="java.lang.String" itemvalue="Clojure Application.clojure-playground.core" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Clojure Application.core" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Clojure Application.clojure-playground.core" />
+        <item index="1" class="java.lang.String" itemvalue="Clojure Application.core" />
       </list>
     </recent_temporary>
   </component>
@@ -460,7 +475,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="635" y="0" width="1292" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -470,9 +484,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29075235" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33620688" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -506,30 +520,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clojure_playground/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="70" lean-forward="false" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/repl.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -812,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mount/mount/0.1.11/mount-0.1.11.jar!/mount/core.cljc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/ring/ring-json/0.4.0/ring-json-0.4.0.jar!/ring/middleware/json.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -855,42 +838,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ring-basic-authentication/ring-basic-authentication/1.0.5/ring-basic-authentication-1.0.5.jar!/ring/middleware/basic_authentication.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="153" column="8" lean-forward="true" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes.edn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/clojure_playground/core_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mount/mount/0.1.11/mount-0.1.11.jar!/mount/core.cljc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430">
+          <caret line="135" column="14" lean-forward="false" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clojure_playground/Dockerfile" />
     <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state relative-caret-position="307">
+          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clojure_playground/app/io.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clojure_playground/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recipes.edn">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="-1002">
+          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clojure_playground/app/main.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="80" column="28" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+        <state relative-caret-position="198">
+          <caret line="56" column="43" lean-forward="false" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
           <folding />
         </state>
       </provider>

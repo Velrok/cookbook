@@ -20,7 +20,8 @@
                  [figwheel-sidecar "0.5.0"]
                  [cljs-http "0.1.43"]
                  [org.clojure/tools.logging "0.4.0"]
-                 [bk/ring-gzip "0.2.1"]]
+                 [bk/ring-gzip "0.2.1"]
+                 [ring-basic-authentication "1.0.5"]]
   :plugins [[lein-cljsbuild "1.1.6"]
             [lein-figwheel "0.5.10"]]
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
@@ -59,6 +60,7 @@
              ;; :server-logfile "tmp/logs/figwheel-logfile.log"
              }
   :main clojure-playground.core
+  :aot [clojure-playground.core]
   :cljsbuild {:builds
               [{:id :production
                 :source-paths ["src"]
