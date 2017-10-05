@@ -1,7 +1,15 @@
-FROM openjdk:8
+FROM clojure:lein-2.7.1-alpine
 MAINTAINER Maik Schwan <maik.schwan@gmail.com>
 
-ADD target/clojure-playground-0.1.0-SNAPSHOT-standalone.jar /usr/bin/app.jar
-WORKDIR /usr/bin/
-CMD ["java", "-jar", "app.jar"]
 
+ADD project.clj .
+RUN lein deps
+
+EXPOSE 3000
+
+ADD . .
+
+RUN lein cljsbuild once production
+
+ENTRYPOINT ["lein"]
+CMD ["run"]
