@@ -9,7 +9,7 @@
 (def base-url "http://localhost:3000")
 
 (defn reset-recipes []
-  (go (let [url (str base-url "/recipes")
+  (go (let [url "/recipes"
             response (<! (http/get url
                                    {:with-credentials? false
                                     :query-params      {"since" 135}}))]
@@ -19,5 +19,5 @@
           (prn @recipes)))))
 
 (defn store-recipe [recipe]
-  (http/post (str base-url "/recipes") {:json-params recipe}))
+  (http/post "/recipes" {:json-params recipe}))
 
