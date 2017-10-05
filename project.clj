@@ -62,7 +62,7 @@
   :main clojure-playground.core
   :aot [clojure-playground.core]
   :cljsbuild {:builds
-              [{:id :production
+              [{:id "production"
                 :source-paths ["src"]
                 :compiler {:main  "clojure-playground.app.main"
                            :asset-path "js/out/prod"
@@ -71,7 +71,7 @@
                            :optimizations :advanced
                            :pretty-print false}}
 
-               {:id :figwheeel
+               {:id "figwheeel"
                 :source-paths ["src"]
                 :figwheel {:on-jsload "clojure-playground.app.main/run"}
                 :compiler {:main "clojure-playground.app.main"
