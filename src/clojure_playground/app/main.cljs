@@ -94,6 +94,7 @@
                           (reset! description (event-value event)))}]
          [button "add" (fn [event]
                          (go (<! (io/store-recipe {:title       @title
+                                                   :ingredients @ingredients
                                                    :description @description}))
                              (io/reset-recipes))
                          false)
@@ -143,6 +144,9 @@
                                (assoc-in recipes
                                          [(keyword (:id recipe)) :ui-state]
                                          :edit))))}
+         [:ul
+          (for [x (:ingredients recipe)]
+            [:li x])]
          (:description recipe)])]]))
 
 
