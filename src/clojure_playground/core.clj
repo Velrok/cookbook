@@ -78,7 +78,7 @@
              {:status 200
               :body   {:recipes (into {} (for [[id recipe] @recipes]
                                            [id (assoc recipe :id id)]))}})
-           (DELETE "/recipe" request
+           (DELETE "/recipes" request
              (let [id (UUID/fromString (get-in request [:params "id"]))]
                (if (contains? @recipes id)
                  (do

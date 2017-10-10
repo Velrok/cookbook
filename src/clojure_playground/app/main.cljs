@@ -104,11 +104,16 @@
   (let [card-id (gensym "card")]
     [:div.card
      [:div.card-header {:role "tab"}
-      [:h5.mb-0
+      [:h5.mb-0.display_inline
        [:a {:data-toggle "collapse"
             :data-parent (str "#" accordion-id)
             :href        (str "#" card-id)}
-        (str (:title recipe))]]]
+        (str (:title recipe))]]
+      [button "x" (fn [event]
+                    (go (<! (io/delete-recipe (:id recipe)))
+                        (io/reset-recipes))
+                    false)
+       "close"]]
      [:div.collapse {:role "tabpanel"
                      :id   card-id}
       (if (= (:ui-state recipe) :edit)

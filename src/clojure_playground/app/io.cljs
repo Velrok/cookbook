@@ -18,6 +18,9 @@
           (reset! recipes response-recipes)
           (prn @recipes)))))
 
+(defn delete-recipe [recipe-id]
+  (http/delete "/recipes" {:query-params {:id recipe-id}}))
+
 (defn store-recipe [recipe]
   (http/post "/recipes" {:json-params recipe}))
 
