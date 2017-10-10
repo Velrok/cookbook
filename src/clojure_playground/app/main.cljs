@@ -101,6 +101,42 @@
           "btn-primary"]]]]]]))
 
 
+(defn render-recipe-edit [recipe]
+  (let [description-edit (atom (:description recipe))]
+    [:div.card-block
+     [:textarea.form-control
+      {:on-change (fn [event]
+                    (reset! description-edit (event-value event)))}
+      (:description recipe)]
+     [button "cancel"
+      (fn [event]
+        (swap! io/recipes
+               (fn [recipes]
+                 (assoc-in recipes
+                           [(keyword (:id recipe)) :ui-state]
+                           :show))))]
+     [button "save" (fn [event]
+                      (go (<! (io/store-recipe {:id          (:id recipe)
+                                                :description @description-edit}))
+                          (io/reset-recipes))
+                      false)
+      "btn-primary"]]))
+
+
+(defn render-recipe-show [recipe]
+  [:div.card-block
+   {:on-click (fn [event]
+                (swap! io/recipes
+                       (fn [recipes]
+                         (assoc-in recipes
+                                   [(keyword (:id recipe)) :ui-state]
+                                   :edit))))}
+   [:ul
+    (for [x (:ingredients recipe)]
+      [:li x])]
+   (:description recipe)])
+
+
 (defn show-recipe-in-accordion [recipe accordion-id]
   (let [card-id (gensym "card")]
     [:div.card
@@ -118,36 +154,8 @@
      [:div.collapse {:role "tabpanel"
                      :id   card-id}
       (if (= (:ui-state recipe) :edit)
-        (let [description-edit (atom (:description recipe))]
-          [:div.card-block
-           [:textarea.form-control
-            {:on-change (fn [event]
-                          (reset! description-edit (event-value event)))}
-            (:description recipe)]
-           [button "cancel"
-            (fn [event]
-              (swap! io/recipes
-                     (fn [recipes]
-                       (assoc-in recipes
-                                 [(keyword (:id recipe)) :ui-state]
-                                 :show))))]
-           [button "save" (fn [event]
-                            (go (<! (io/store-recipe {:id          (:id recipe)
-                                                      :description @description-edit}))
-                                (io/reset-recipes))
-                            false)
-            "btn-primary"]])
-        [:div.card-block
-         {:on-click (fn [event]
-                      (swap! io/recipes
-                             (fn [recipes]
-                               (assoc-in recipes
-                                         [(keyword (:id recipe)) :ui-state]
-                                         :edit))))}
-         [:ul
-          (for [x (:ingredients recipe)]
-            [:li x])]
-         (:description recipe)])]]))
+        (render-recipe-edit recipe)
+        (render-recipe-show recipe))]]))
 
 
 (defn recipes-accordion [recipes]
