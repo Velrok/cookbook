@@ -3,5 +3,5 @@
             [clojure-playground.core :refer :all]))
 
 (deftest a-test
-  (testing "Always passes."
+  (testing "Always passes"
     (is (= 1 1))))
