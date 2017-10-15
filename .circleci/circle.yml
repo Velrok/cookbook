@@ -1,16 +1,13 @@
-machine:
-  services:
-    - docker
+version: 2
+jobs:
+ build:
+   machine: true
+   steps:
+     - checkout
 
-dependencies:
-  override:
-    - docker info
-    - docker build --rm=false -t nesurion/cookbook:latest .
+     # build the application container
+     - run: docker build -t nesurion/cookbook:latest .
 
-deployment:
-  hub:
-    branch: master
-    commands:
-      - docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push nesurion/cookbook:latest
-
+     # deploy the container
+     - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+     - run: docker push nesurion/cookbook:latest
