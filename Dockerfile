@@ -1,6 +1,7 @@
 FROM clojure:lein-2.7.1-alpine
 MAINTAINER Maik Schwan <maik.schwan@gmail.com>
 
+WORKDIR /cookbook
 
 ADD project.clj .
 RUN lein deps
