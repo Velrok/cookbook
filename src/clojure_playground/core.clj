@@ -27,7 +27,7 @@
 
 
 (def recipes-filename "data/recipes.edn")
-(defonce recipes (atom (slurp-edn recipes-filename {})))
+(def recipes (atom (slurp-edn recipes-filename {})))
 (add-watch recipes :recipes-file-store
            (fn [_ _ _ new-value]
              (log/info "writing new recipe to" recipes-filename)
