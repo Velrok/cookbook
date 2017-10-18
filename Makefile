@@ -3,7 +3,7 @@
 default : build push
 
 build:
-	docker build --tag velrok/cookbook .
+	docker build --tag nesurion/cookbook .
 
 run:
-	docker run -P velrok/cookbook:latest
+	docker run -P nesurion/cookbook:latest
