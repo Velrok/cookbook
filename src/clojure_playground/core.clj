@@ -26,7 +26,7 @@
       default-value)))
 
 
-(def recipes-filename "recipes.edn")
+(def recipes-filename "data/recipes.edn")
 (defonce recipes (atom (slurp-edn recipes-filename {})))
 (add-watch recipes :recipes-file-store
            (fn [_ _ _ new-value]
@@ -118,3 +118,4 @@
 
 (comment
   (restart))
+
