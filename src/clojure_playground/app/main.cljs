@@ -101,9 +101,15 @@
           "btn-primary"]]]]]]))
 
 
+(defn render-ingredients-show [ingredients]
+  [:ul
+    (for [x ingredients]
+      [:li x])])
+
 (defn render-recipe-edit [recipe]
   (let [description-edit (atom (:description recipe))]
     [:div.card-block
+     [render-ingredients-show (:ingredients recipe)]
      [:textarea.form-control
       {:on-change (fn [event]
                     (reset! description-edit (event-value event)))}
@@ -125,16 +131,14 @@
 
 (defn render-recipe-show [recipe]
   [:div.card-block
-   {:on-click (fn [event]
+   [render-ingredients-show (:ingredients recipe)] 
+   [:span {:on-click (fn [event]
                 (swap! io/recipes
                        (fn [recipes]
                          (assoc-in recipes
                                    [(keyword (:id recipe)) :ui-state]
                                    :edit))))}
-   [:ul
-    (for [x (:ingredients recipe)]
-      [:li x])]
-   (:description recipe)])
+    (:description recipe)]])
 
 
 (defn show-recipe-in-accordion [recipe accordion-id]
