@@ -133,13 +133,14 @@
 (defn render-recipe-show [recipe]
   [:div.card-block
    [render-ingredients-show (:ingredients recipe)] 
-   [:span {:on-click (fn [event]
+   [:div {:dangerouslySetInnerHTML  {:__html (md->html (:description recipe))}
+          :on-click (fn [event]
                 (swap! io/recipes
                        (fn [recipes]
                          (assoc-in recipes
                                    [(keyword (:id recipe)) :ui-state]
                                    :edit))))}
-    (md->html (:description recipe))]])
+    ]])
 
 
 (defn show-recipe-in-accordion [recipe accordion-id]
