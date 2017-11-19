@@ -2,6 +2,7 @@
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [reagent.core :as r]
             [cljs.core.async :refer [<!]]
+            [markdown.core :refer [md->html]]
             [clojure-playground.app.io :as io]))
 
 (enable-console-print!)
@@ -138,7 +139,7 @@
                          (assoc-in recipes
                                    [(keyword (:id recipe)) :ui-state]
                                    :edit))))}
-    (:description recipe)]])
+    (md->html (:description recipe))]])
 
 
 (defn show-recipe-in-accordion [recipe accordion-id]

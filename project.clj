@@ -21,6 +21,7 @@
                  [cljs-http "0.1.43"]
                  [org.clojure/tools.logging "0.4.0"]
                  [bk/ring-gzip "0.2.1"]
+                 [markdown-clj  "1.0.1"]
                  [ring-basic-authentication "1.0.5"]]
   :plugins [[lein-cljsbuild "1.1.6"]
             [lein-figwheel "0.5.10"]]
