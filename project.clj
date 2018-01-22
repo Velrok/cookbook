@@ -16,6 +16,7 @@
                  [cljs-http "0.1.42"]
                  [org.clojure/clojurescript "1.9.521"]
                  [reagent "0.6.1"]
+                 [environ "1.1.0"]
                  [secretary "1.2.3"]
                  [figwheel-sidecar "0.5.0"]
                  [cljs-http "0.1.43"]

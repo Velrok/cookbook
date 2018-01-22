@@ -12,11 +12,13 @@
     [ring.util.response :as resp]
     [clojure.tools.logging :as log]
     [ring.middleware.gzip :refer [wrap-gzip]]
+    [environ.core :refer [env]]
     [ring.middleware.basic-authentication :refer [wrap-basic-authentication]])
   (:import [java.util UUID])
   (:gen-class))
 
-(def basic-auth-user (env))
+(def basic-auth-user     (:basic-auth-user env))
+(def basic-auth-password (:basic-auth-password env))
 
 (defn slurp-edn [filename default-value]
   (try
@@ -36,9 +38,9 @@
 
 
 (defn authenticated? [name pass]
-  (and (= name "nesurion")
+  (and (= name basic-auth-user)
        ;; don't store the password in plain text
-       (= pass "vnjxMUpD9wdixN7Bwr3q")))
+       (= pass basic-auth-password)))
 
 
 (defn access-controll-headers
@@ -108,12 +110,28 @@
                                                     :join? false})
           :stop (.stop server))
 
+(defn config-check!
+  "Checks that all mandatory config is set.
+  System exits otherwise."
+  []
+  (when (nil? basic-auth-user)
+    (log/error "Basic auth user not set! Please set BASIC_AUTH_USER")
+    (mount/stop)
+    (System/exit 1))
+
+  (when (nil? basic-auth-password)
+    (log/error "Basic auth password not set! Please set BASIC_AUTH_PASSWORD")
+    (mount/stop)
+    (System/exit 2)))
+
 (defn restart []
+  (config-check!)
   (mount/stop)
   (mount/start))
 
 
 (defn -main [& args]
+  (config-check!)
   (mount/start))
 
 
