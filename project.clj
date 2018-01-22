@@ -1,4 +1,4 @@
-(defproject clojure-playground "0.1.0-SNAPSHOT"
+(defproject cookbook "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -60,12 +60,12 @@
              ;; to configure a different figwheel logfile path
              ;; :server-logfile "tmp/logs/figwheel-logfile.log"
              }
-  :main clojure-playground.core
-  :aot [clojure-playground.core]
+  :main cookbook.core
+  :aot [cookbook.core]
   :cljsbuild {:builds
               [{:id "production"
                 :source-paths ["src"]
-                :compiler {:main  "clojure-playground.app.main"
+                :compiler {:main  "cookbook.app.main"
                            :asset-path "js/out/prod"
                            :output-to "resources/public/js/out/prod/main.min.js"
                            :output-dir "resources/public/js/out/prod"
@@ -74,8 +74,8 @@
 
                {:id "figwheeel"
                 :source-paths ["src"]
-                :figwheel {:on-jsload "clojure-playground.app.main/run"}
-                :compiler {:main "clojure-playground.app.main"
+                :figwheel {:on-jsload "cookbook.app.main/run"}
+                :compiler {:main "cookbook.app.main"
                            :asset-path "js/out/dev"
                            :output-to "resources/public/js/out/dev/main.js"
                            :output-dir "resources/public/js/out/dev"

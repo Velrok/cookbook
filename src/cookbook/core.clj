@@ -1,4 +1,4 @@
-(ns clojure-playground.core
+(ns cookbook.core
   (:require
     [clojure.string :as string :refer [split]]
     [clojure.edn :as edn]
@@ -16,6 +16,7 @@
   (:import [java.util UUID])
   (:gen-class))
 
+(def basic-auth-user (env))
 
 (defn slurp-edn [filename default-value]
   (try

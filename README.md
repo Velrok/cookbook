@@ -1,6 +1,6 @@
 # clojure-playground
 
-A Clojure library designed to ... well, that part is up to you.
+A single page app for recepie management.
 
 ## Usage
 

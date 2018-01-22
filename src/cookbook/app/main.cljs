@@ -1,9 +1,9 @@
-(ns clojure-playground.app.main
+(ns cookbook.app.main
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [reagent.core :as r]
             [cljs.core.async :refer [<!]]
             [markdown.core :refer [md->html]]
-            [clojure-playground.app.io :as io]))
+            [cookbook.app.io :as io]))
 
 (enable-console-print!)
 

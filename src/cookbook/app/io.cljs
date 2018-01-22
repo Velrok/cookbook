@@ -1,4 +1,4 @@
-(ns clojure-playground.app.io
+(ns cookbook.app.io
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [reagent.core :as r]
             [cljs-http.client :as http]
