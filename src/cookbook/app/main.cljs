@@ -1,6 +1,7 @@
 (ns cookbook.app.main
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [reagent.core :as r]
+            [cookbook.app.components :as components]
             [cljs.core.async :refer [<!]]
             [markdown.core :refer [md->html]]
             [cookbook.app.io :as io]))
@@ -179,11 +180,62 @@
    [:code
     (prn-str state-atom)]])
 
+(defn recepies-management
+  []
+  [:div
+   [recipes-accordion (sort-by :title (vals @io/recipes))]
+   [new-recipe]])
+
+
+(def shopping-cart (r/atom {}))
+
+(defn dec-to-zero
+  [x]
+  (if (< 0 x)
+    (dec x)
+    0))
+
+(defn shopping
+  []
+  [:div
+   [:div.row
+    [:div.col-12
+     [:h1 "Shopping"]]]
+   [:div.row
+    [:div.col-6
+     [:h2 "Recepies"]
+     [components/list-group (for [recepie (->> @io/recipes
+                                               vals
+                                               (map :title)
+                                               sort)]
+                              [:div
+                               [:span 
+                                [components/outline-button [components/icon "plus"]
+                                 {:on-click #(swap! shopping-cart (fn [cart] (update-in cart [recepie] (fnil inc 0))))}]
+                                [components/outline-button [components/icon "minus"]
+                                 {:on-click #(swap! shopping-cart (fn [cart] (update-in cart [recepie] (fnil dec-to-zero 0))))}]]
+                               [:span recepie]
+                               ])]
+     ]
+    [:div.col-6
+     [:h2 "cart"]
+     [:pre
+      (prn-str @shopping-cart)]]]])
+
+;(def active-view (r/atom recepies-management))
+(def active-view (r/atom shopping))
+
 (defn app []
   [:div
    [header "cookbook"]
-   [recipes-accordion (sort-by :title (vals @io/recipes))]
-   [new-recipe]])
+   [components/tabs
+    [{:title "Recepies" :on-click #(reset! active-view recepies-management)}
+     {:title "Shopping" :on-click #(reset! active-view shopping)}]
+    (get {recepies-management "Recepies"
+          shopping "Shopping"}
+         @active-view)]
+   [@active-view]
+   ])
 
 
 (defn ^:export run []
