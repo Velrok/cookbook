@@ -29,7 +29,6 @@
   [btn-body & [{:keys [btn-type on-click]
                 :or {btn-type "primary"}
                 :as html-attributes}]]
-  (println html-attributes)
   [:button {:type "button"
             :on-click on-click
             :class (str "btn btn-outline-" btn-type)}
