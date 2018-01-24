@@ -204,23 +204,31 @@
    [:div.row
     [:div.col-6
      [:h2 "Recepies"]
-     [components/list-group (for [recepie (->> @io/recipes
-                                               vals
-                                               (map :title)
-                                               sort)]
-                              [:div
-                               [:span 
-                                [components/outline-button [components/icon "plus"]
-                                 {:on-click #(swap! shopping-cart (fn [cart] (update-in cart [recepie] (fnil inc 0))))}]
-                                [components/outline-button [components/icon "minus"]
-                                 {:on-click #(swap! shopping-cart (fn [cart] (update-in cart [recepie] (fnil dec-to-zero 0))))}]]
-                               [:span recepie]
-                               ])]
+     [components/list-group
+      (for [recepie (->> @io/recipes vals (sort-by :title))]
+        [:div
+         [:span
+          [components/outline-button [components/icon "plus"]
+           {:on-click #(swap! shopping-cart (fn [cart] (update-in cart [recepie] (fnil inc 0))))}]
+          [components/outline-button [components/icon "minus"]
+           {:on-click #(swap! shopping-cart (fn [cart] (update-in cart [recepie] (fnil dec-to-zero 0))))}]]
+         [:span (:title recepie)]])]
      ]
     [:div.col-6
      [:h2 "cart"]
      [:pre
-      (prn-str @shopping-cart)]]]])
+      [components/list-group
+       (->> @shopping-cart
+            (remove (fn [[recepie quantity]]
+                      (< quantity 1)))
+            (mapcat (fn [[recepie quantity]]
+                      (mapcat (constantly (:ingredients recepie)) (range quantity))))
+            (group-by identity)
+            (map (fn [[ingredient group]]
+                   (str ingredient " x" (count group)))))]]]
+    [:div.col-12
+     [:h2 "debug"]
+     [:code (pr-str @shopping-cart)]]]])
 
 ;(def active-view (r/atom recepies-management))
 (def active-view (r/atom shopping))
@@ -234,8 +242,7 @@
     (get {recepies-management "Recepies"
           shopping "Shopping"}
          @active-view)]
-   [@active-view]
-   ])
+   [@active-view]])
 
 
 (defn ^:export run []
