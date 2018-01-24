@@ -63,6 +63,7 @@
              }
   :main cookbook.core
   :aot [cookbook.core]
+  :jvm-opts ["-Xms100m" "-Xmx500m"]
   :cljsbuild {:builds
               [{:id "production"
                 :source-paths ["src"]
